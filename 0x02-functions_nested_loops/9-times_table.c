@@ -14,29 +14,20 @@ void times_table(void)
 		while (b < 10)
 		{
 			product = a * b;
-			if (product >= 10)
+			if (b != 0)
 			{
-				_putchar(product / 10 + '0');
-				_putchar(product % 10 + '0');
-				if (b < 9)
-				{
-					_putchar(',');
-					_putchar(' ');
-				}
+				_putchar(',');
+				_putchar(' ');
 			}
-			else
-			{
-				_putchar(product + '0');
-				if (b < 9)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-				}
-			}
+			if (product < 10 && b != 0)
+				_putchar(' ');
+			else if (product >= 10)
+				_putchar('0' + product / 10);
+
+			_putchar('0' + product % 10);
 			b++;
 		}
-		a++;
 		_putchar('\n');
+		a++;
 	}
 }
