@@ -1,13 +1,14 @@
 #include "main.h"
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
+ * _islower - prints 1 or 0 depending on input
+ * @c: first parameter
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Description: prints all lowercase letters
+ * Return: Always(0).
  */
+
 int _islower(int c)
 {
-        return (write(1, &c, 1));
+	return (c >= 'a' && c <= 'z');
 }

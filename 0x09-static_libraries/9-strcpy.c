@@ -1,11 +1,12 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * _strcpy - copies the string pointed to by src,
+ * including the terminating null byte, to the
+ * buffer pointed to by dest.
+ * @dest: destination.
+ * @src: source.
+ * Return: the pointer to dest.
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -19,4 +20,4 @@ char *_strcpy(char *dest, char *src)
 		count++;
 	}
 	return (dest);
-}    
+}

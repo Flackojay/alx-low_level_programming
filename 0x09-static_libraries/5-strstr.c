@@ -1,12 +1,13 @@
 #include "main.h"
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
+ * _strstr - finds the first occurrence of the substring.
+ * needle in the string haystack.
+ * @haystack: entire string.
+ * @needle: substring.
+ * Return: pointer to the beginning of located substring or
+ * NULL if the substring is not found.
+*/
 char *_strstr(char *haystack, char *needle)
 {
 	char *bhaystack;
@@ -27,4 +28,4 @@ char *_strstr(char *haystack, char *needle)
 		haystack = bhaystack + 1;
 	}
 	return (0);
-}   
+}

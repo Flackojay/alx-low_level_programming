@@ -1,13 +1,15 @@
 #include "main.h"
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * _strlen - returns the length of a string.
+ * @s: input stringeturn.
+ * Return: length of a string.
  */
 int _strlen(char *s)
 {
-	return (s);
+	int count = 0;
+
+	while (*(s + count) != '\0')
+		count++;
+	return (count);
 }
