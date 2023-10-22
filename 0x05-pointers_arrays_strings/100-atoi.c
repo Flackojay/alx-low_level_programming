@@ -10,7 +10,7 @@
 int _atoi(char *s)
 {
 	int sign = 1;
-	int result = 0;
+	unsigned int result = 0;
 	int length = 0;
 	int i = 0;
 
@@ -23,15 +23,11 @@ int _atoi(char *s)
 		else if (s[i] == '-' || s[i] == '+')
 		{
 			if (s[i] == '-')
-				sign = -1 * sign;
+				sign *= -1;
 			i++;
 		}
 		else if (s[i] >= '0' && s[i] <= '9')
 		{
-			if (sign * (result * 10 + (s[i] - '0')) > INT_MAX)
-				return (INT_MAX);
-			if (sign * (result * 10 + (s[i] - '0')) < INT_MIN)
-				return (INT_MIN);
 			result = result * 10 + (s[i] - '0');
 			if (!(s[i + 1] >= '0' && s[i + 1] <= '9'))
 				break;
@@ -40,5 +36,5 @@ int _atoi(char *s)
 		else
 			i++;
 	}
-	return (sign * result);
+	return (result * sign);
 }
