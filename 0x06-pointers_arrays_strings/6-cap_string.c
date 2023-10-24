@@ -8,17 +8,17 @@
  */
 int is_separator(char c)
 {
-    char separators[] = " \t\n,;.!?\"(){}";
-    int i;
+	char separators[] = " \t\n,;.!?\"(){}";
+	int i;
 
-    for (i = 0; separators[i] != '\0'; i++)
-    {
-        if (c == separators[i])
-        {
-            return 1;
-        }
-    }
-    return 0;
+	for (i = 0; separators[i] != '\0'; i++)
+	{
+		if (c == separators[i])
+		{
+			return (1);
+		}
+	}
+	return (0);
 }
 
 /**
@@ -29,25 +29,24 @@ int is_separator(char c)
  */
 char *cap_string(char *str)
 {
-    int capitalize = 1; /* Variable to track if the next character should be capitalized */
-    int i;
+	int capitalize = 1;
+	int i;
 
-    for (i = 0; str[i] != '\0'; i++)
-    {
-        if (is_separator(str[i]))
-        {
-            capitalize = 1;
-        }
-        else if (capitalize && str[i] >= 'a' && str[i] <= 'z')
-        {
-            str[i] = str[i] - ('a' - 'A'); /* Convert to uppercase */
-            capitalize = 0;
-        }
-        else
-        {
-            capitalize = 0;
-        }
-    }
-
-    return str;
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (is_separator(str[i]))
+		{
+			capitalize = 1;
+		}
+		else if (capitalize && str[i] >= 'a' && str[i] <= 'z')
+		{
+			str[i] = str[i] - ('a' - 'A');
+			capitalize = 0;
+		}
+		else
+		{
+			capitalize = 0;
+		}
+	}
+	return (str);
 }
