@@ -24,4 +24,5 @@ int main(void)
 		second = next;
 	}
 	printf("%u\n", sum);
+	return (0);
 }
