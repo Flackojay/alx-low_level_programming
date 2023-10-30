@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * rot13: encodes a string using rot13
+ * rot13 - encodes a string using rot13
  * @str: string to encode
  *
  * Return: encoded string
@@ -19,9 +19,9 @@ char *rot13(char *str)
 			if (str[i] == a[j])
 			{
 				str[i] = rot[j];
+				break;
 			}
 		}
 	}
 	return (str);
 }
-
