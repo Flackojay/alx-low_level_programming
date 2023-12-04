@@ -29,6 +29,7 @@ char *custom_strdup(const char *src)
 	{
 		dest[i] = src[i];
 	}
+	dest[length] = '\0';
 	return (dest);
 }
 
