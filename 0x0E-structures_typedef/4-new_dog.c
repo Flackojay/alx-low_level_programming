@@ -20,7 +20,7 @@ char *custom_strdup(const char *src)
 	{
 		length++;
 	}
-	dest = malloc(length * sizeof(char));
+	dest = malloc((length + 1) * sizeof(char));
 	if (dest == NULL)
 	{
 		return (NULL);
