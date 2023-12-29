@@ -9,16 +9,16 @@
 int main(void)
 {
 	int i;
-	unsigned int first = 1;
-	unsigned int second = 2;
-	unsigned int next;
+	unsigned long first = 1;
+	unsigned long second = 2;
+	unsigned long next;
 
-	printf("%u, %u", first, second);
+	printf("%lu, %lu", first, second);
 
-	for (i = 2; i < 98; ++i)
+	for (i = 3; i <= 98; ++i)
 	{
 		next = first + second;
-		printf(", %u", next);
+		printf(", %lu", next);
 		first = second;
 		second = next;
 	}
